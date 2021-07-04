@@ -45,6 +45,11 @@
   cursor: pointer;
 }
 
+.headerBlock__infoText > h4 > span:hover {
+  border-bottom-width: 2px;
+  color: black;
+}
+
 .headerBlock__actions {
   margin-top: 330px;
   display: flex;
@@ -58,4 +63,19 @@
   padding-top: 12px;
   padding-bottom: 12px;
   border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+  outline: none;
+}
+
+.headerBlock__buttonPrimary {
+  background-color: #393c41;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.headerBlock__buttonSecondary {
+  background-color: #fff;
+  color: #000;
+  opacity: 0.8;
 }

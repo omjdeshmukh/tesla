@@ -4,32 +4,36 @@ import { Link } from "react-router-dom";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 
-const Header = ({ isMenuOpen, setIsMenuOpen }) => {
+function Header({ isMenuOpen, setIsMenuOpen }) {
   return (
     <div className="header">
       <div className="header__logo">
         <Link to="/">
-          <img
+          <svg
             className="header__logoImg"
-            src="https://assets.website-files.com/5e8fceb1c9af5c3915ec97a0/5ec2f037975ed372da9f6286_Tesla-Logo-PNG-HD.png"
-            alt="logo"
-          />
+            viewBox="0 0 342 35"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 .1a9.7 9.7 0 007 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 007-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 006-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 00-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 13.8h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 14.1h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zM308.5 7h26a9.6 9.6 0 007-7h-40a9.6 9.6 0 007 7z"
+              fill="var(--tds-icon--fill, #171a20)"
+            ></path>
+          </svg>
         </Link>
       </div>
       <div className="header__links">
         <Link to="/">Model S</Link>
-        <Link to="/">Model X</Link>
         <Link to="/">Model 3</Link>
+        <Link to="/">Model X</Link>
         <Link to="/">Model Y</Link>
         <Link to="/">Solar Roof</Link>
         <Link to="/">Solar Panels</Link>
       </div>
-
       <div className="header__right">
         <Link to="/" className={isMenuOpen && "header__link--hidden"}>
           Shop
         </Link>
-        <Link to="/" className={isMenuOpen && "header__link--hidden"}>
+        <Link to="/login" className={isMenuOpen && "header__link--hidden"}>
           Tesla Account
         </Link>
         <div
@@ -41,6 +45,6 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
       </div>
     </div>
   );
-};
+}
 
 export default Header;
